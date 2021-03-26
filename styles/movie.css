@@ -1,3 +1,9 @@
-.input{
-margin-right: 4rem;
+.control{
+margin-right: 15rem;
+}
+#image{
+    margin-left: 30rem;
+    padding-bottom: 15px;
+    width:200px;
+    length:200px;
 }

@@ -1,10 +1,11 @@
 
 window.onload=function(){
+        
     fetch('http://www.omdbapi.com/?i=tt3896198&apikey=d9703216')
     .then((response)=>response.json())
     .then(function(data){
-        //var image=document.getElementById("image");
-        //image.src=data.Poster;
+        var image=document.getElementById("image");
+        image.src=data.Poster;
         console.log(data)
         var title=document.getElementById("title");
         title.value=data.Title;
@@ -22,6 +23,13 @@ window.onload=function(){
         actor.value=data.Actors;
         var plot=document.getElementById("plot");
         plot.value=data.Plot;
+        var imdb=data.imdbRating;
+        var rating=document.getElementById("rating");
+        var img = document.createElement("img");
+        img.src = "images/trophy.png";
+        for(var i=0;i<imdb;i++){
+         rating.appendChild(img);
+         console.log(rating);        }   
 
     }
         );

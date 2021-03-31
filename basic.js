@@ -10,7 +10,7 @@ app.use('/', function(request, response, next) {
 app.get('/', function(request,response){
     response.sendFile(__dirname+'/public/showtimes.html');
 })
-app.get('/scripts/showtimes.js', function(request, response) { 
+app.get('/', function(request, response) { 
     console.log(request.query);
     response.send("data entered");
 });

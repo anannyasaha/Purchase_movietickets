@@ -10,7 +10,10 @@ app.use('/', function(request, response, next) {
 app.get('/', function(request,response){
     response.sendFile(__dirname+'/public/showtimes.html');
 })
-
+app.get('/scripts/showtimes.js', function(request, response) { 
+    console.log(request.query);
+    response.send("data entered");
+});
 app.set('port', process.env.PORT || 3000);
 app.listen(app.get('port'), function() {
     console.log(`Listening for requests on port ${app.get('port')}.`);

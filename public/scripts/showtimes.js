@@ -3,6 +3,10 @@ window.onload=function(){
 
     var button=document.getElementById('search');
     button.onclick=function(){
+        const div = document.getElementById('movie_details');
+        while(div.firstChild){
+        div.removeChild(div.firstChild);
+                   }
     fetch('showtimes.json')
     .then((response)=>response.json())
     .then(function(data){

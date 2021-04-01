@@ -12,8 +12,10 @@ app.get('/', function(request,response,next){
     next();
 })
 app.get('/', function(request, response,next) { 
+    var location=request.query.location;
+    var date=request.query.date;
     console.log(request.query);
-    response.send("data entered");
+    
     next();
 });
 app.set('port', process.env.PORT || 3000);

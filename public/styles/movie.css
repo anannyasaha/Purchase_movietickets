@@ -1,6 +1,7 @@
-#date_for_movie{
-margin-right: 40rem;
+#info_for_movie{
+margin-right: 73rem;
 }
+
 #image{
     
     padding-bottom: 15px;
@@ -21,6 +22,7 @@ margin-right: 40rem;
     width:80px
 }
 #movie_details{
+    margin-top:20px;
     margin-left:190px; 
     position: absolute;
     z-index: 1;
@@ -44,7 +46,7 @@ margin-right: 40rem;
     display: none;
     position: absolute;
     z-index: 1;
-    top: 350px;
+    top: 200px;
     margin-left:700px;
 }
 #rating{

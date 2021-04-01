@@ -1,11 +1,11 @@
-.control{
-margin-right: 15rem;
+#date_for_movie{
+margin-right: 40rem;
 }
 #image{
-    margin-left: 30rem;
+    
     padding-bottom: 15px;
     width:200px;
-    length:200px;
+    margin-left: 80px;
 }
 #location{
     padding:30px;
@@ -17,4 +17,36 @@ margin-right: 15rem;
     margin-top: 30px;
     margin-left:270px;
 }
-
+#table_fortime{
+    width:80px
+}
+#movie_details{
+    margin-left:190px; 
+    position: absolute;
+    z-index: 1;
+    left: 70px;
+    
+}
+#table_rows{ 
+    border-bottom: 1px solid rgb(187, 187, 187);
+    border-collapse: collapse;
+}
+#cell{
+    padding:10px;
+}
+.moviecell{
+    padding:10px;
+    font-weight: bold;
+    
+}
+#field_form{
+    margin-left: 50rem;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 350px;
+    margin-left:700px;
+}
+#rating{
+    padding-bottom: 4rem;
+}

@@ -7,7 +7,13 @@ window.onload=function(){
         while(div.firstChild){
         div.removeChild(div.firstChild);
                    }
-    fetch('showtimes.json')
+        var location=document.getElementById("Location_for_movie").value;
+        var date=document.getElementById("Date").value;
+        console.log(location,date);
+    var url=new URL("http://127.0.0.1:5500/public/showtimes.json"),
+    params = {location:location, date:date}
+ Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
+    fetch(url)
     .then((response)=>response.json())
     .then(function(data){
         var time=document.getElementById("Date");

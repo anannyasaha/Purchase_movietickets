@@ -1,5 +1,7 @@
 let express = require('express');
+const bcrypt = require('bcryptjs');
 
+const model = require(__dirname+'/public/model/showtimes_model.js');
 let app = express();
 app.use(express.static('public'));
 
@@ -14,8 +16,7 @@ app.get('/', function(request,response,next){
 app.get('/', function(request, response,next) { 
     var location=request.query.location;
     var date=request.query.date;
-    console.log(request.query);
-    
+    console.log(request.query.location);
     next();
 });
 app.set('port', process.env.PORT || 3000);

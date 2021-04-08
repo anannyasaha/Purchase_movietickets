@@ -10,9 +10,10 @@ window.onload=function(){
         var location=document.getElementById("Location_for_movie").value;
         var date=document.getElementById("Date").value;
         console.log(location,date);
-    var url=new URL("http://127.0.0.1:5500/public/showtimes.json"),
-    params = {location:location, date:date}
- Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
+    var url=`showtimes.json?location_id=${location}&selected_date=${date}`;
+//     params = {location:location, date:date}
+//  Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
+  console.log(url);
     fetch(url)
     .then((response)=>response.json())
     .then(function(data){

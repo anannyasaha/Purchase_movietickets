@@ -2,7 +2,7 @@
     {
         "id": "tt0059742",
         "title": "The Sound of Music",
-        "location": "Oshawa Cinemas",
+        "location": 1,
         "date": "2021/01/01",
         "times": [
             "7:15pm",
@@ -12,7 +12,7 @@
     {
         "id": "tt0059113",
         "title": "Doctor Zhivago",
-        "location": "Oshawa Cinemas",
+        "location": 1,
         "date": "2021/01/01",
         "times": [
             "7:35pm",
@@ -23,7 +23,7 @@
     {
         "id": "tt0059243",
         "title": "The Great Race",
-        "location": "Oshawa Cinemas",
+        "location": 1,
         "date": "2021/01/01",
         "times": [
             "6:45pm",
@@ -33,7 +33,7 @@
     {
         "id": "tt0059578",
         "title": "For a Few Dollars More",
-        "location": "Oshawa Cinemas",
+        "location":1,
         "date": "2021/01/01",
         "times": [
             "8:05pm",
@@ -43,7 +43,7 @@
     {
         "id": "tt0059661",
         "title": "The Rounders",
-        "location": "Whitby Cinemas",
+        "location": 3,
         "date": "2021/01/01",
         "times": [
             "4:10pm"
@@ -52,7 +52,7 @@
     {
         "id": "tt0059800",
         "title": "Thunderball",
-        "location": "Ajax Cinemas",
+        "location":2,
         "date": "2021/01/01",
         "times": [
             "8:00pm"

@@ -23,4 +23,4 @@ let movieSchema = new Schema({
 }, {
     collection: 'moviedatabase'
 });
-module.exports.Movies=mongoose.model('movies',movieSchema);
+module.exports=mongoose.model('movies',movieSchema);

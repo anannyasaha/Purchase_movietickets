@@ -10,7 +10,7 @@ window.onload=function(){
         var location=document.getElementById("Location_for_movie").value;
         var date=document.getElementById("Date").value;
         console.log(location,date);
-    var url=`showtimes.json?location_id=${location}&selected_date=${date}`;
+    var url=`showtimes_api?location_id=${location}&selected_date=${date}`;
 //     params = {location:location, date:date}
 //  Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
   console.log(url);

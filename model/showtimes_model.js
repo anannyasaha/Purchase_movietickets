@@ -17,10 +17,10 @@ let Schema = mongoose.Schema;
 let movieSchema = new Schema({
     id: String,
     title: String,
-    location: String,
+    location: Number,
     date: String,
-    times: Array,
+    times: [String],
 }, {
-    collection: 'moviedatabase'
+    collection: 'movies'
 });
 module.exports=mongoose.model('movies',movieSchema);

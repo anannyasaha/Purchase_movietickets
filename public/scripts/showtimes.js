@@ -1,4 +1,8 @@
+
 window.onload=function(){
+    var location;
+    var place;
+    var date;
     var table=document.getElementById("movie_details")
 
     var button=document.getElementById('search');
@@ -7,8 +11,18 @@ window.onload=function(){
         while(div.firstChild){
         div.removeChild(div.firstChild);
                    }
-        var location=document.getElementById("Location_for_movie").value;
-        var date=document.getElementById("Date").value;
+        location=document.getElementById("Location_for_movie").value;
+        
+        if(location==1){
+            place="Oshawa Cinemas";
+        }
+        if(location==2){
+           place="Ajax Cinemas";
+        }
+        if(location==3){
+            place="Whitby Cinemas";
+        }
+        date=document.getElementById("Date").value;
         console.log(location,date);
     var url=`showtimes_api?location_id=${location}&selected_date=${date}`;
 //     params = {location:location, date:date}
@@ -29,12 +43,32 @@ window.onload=function(){
         time.setAttribute("id","cell");
         for(var j=0;j<data[i].times.length;j++){
             var showtime=document.createElement("ul");
+           // var buybutton=document.createElement("button");
+           // buybutton.setAttribute("id","buybutton");
+            
+            var buy=document.createElement("img");
+            buy.setAttribute('class','buybutton');
+            buy.setAttribute('id',"buybutton"+i+j);
+            buy.src="images/buy.png";
+            
+           // buybutton.style.backgroundImage="url('images/buy.png')";
             showtime.innerHTML=data[i].times[j];
             time.append(showtime);
+            //console.log(buybutton.style.backgroundImage);
+            time.append(buy);
             console.log(showtime);
         }
         }
     }
+    $('.buybutton').on('click',function(){
+        var datarow=this.id.slice(9,10);
+        var time=this.id.slice(10);
+        var movie_id=data[datarow].id;
+        var movie_title=data[datarow].title;
+        var starttime=data[datarow].times[time];
+     var url=`buyticket?location_id=${location}&location=${place}&selected_date=${date}&movie_id=${movie_id}&movie_title=${movie_title}&start_time=${starttime}`;
+    window.location.href=url;
+    })
     $('.moviecell').on('click',
     function(){
         

@@ -1,0 +1,43 @@
+doctype 
+html
+    head
+        title=title 
+        link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css")
+        link(rel="stylesheet" href="styles/movie.css")
+        script(type="text/javascript" src="scripts/showtimes.js")
+    body
+        section(class="hero is-danger")
+            div(class="hero-body")
+                p(class="title") Buy Tickets
+                p(class="subtitle") Let's do this
+        form(action='/buyticket',method='post',class="movie_form")
+            div(class="field is-horizontal")
+                div(class="field label")
+                    label(class="label") Movie 
+                div(class="field-body")
+                    div(class="field")
+                        div(class="control")
+                            input(class="input" id="year" type="text" value=movie_title readonly)
+            div(class="field is-horizontal")
+                div(class="field label")
+                    label(class="label") Location
+                div(class="field-body")
+                    div(class="field")
+                        div(class="control")
+                            input(class="input" id="year" type="text" value=location readonly)
+            div(class="field is-horizontal")
+                div(class="field label")
+                    label(class="label") Date  
+                div(class="field-body")
+                    div(class="field")
+                        div(class="control")
+                            input(class="input" id="year" type="text" value=selected_date readonly)
+            div(class="field is-horizontal")
+                div(class="field label")
+                    label(class="label") Time
+                div(class="field-body")
+                    div(class="field")
+                        div(class="control")
+                            input(class="input" id="year" type="text" value=start_time readonly)
+            div
+                button(class="button is-danger") Buy 
